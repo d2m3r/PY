@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <title>Penalty AI — Signal Assistant</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Russo+One&display=swap" rel="stylesheet">
@@ -51,6 +51,34 @@ video.bg-video{
   padding:20px;
   z-index:1;
   border:1px solid rgba(0,179,255,0.06);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+/* адаптация для мобильных */
+@media (max-width:768px){
+  html,body{
+    padding:0;
+    height:100vh;
+    overflow:hidden;
+  }
+  .card{
+    height:100vh;
+    max-height:100dvh;
+    border-radius:0;
+    padding:16px;
+    box-shadow:none;
+    border:none;
+    justify-content:space-between;
+  }
+  .title{font-size:14px;}
+  .subtitle{font-size:10px;}
+  .visual{min-height:auto;}
+  .goal-area{max-width:100%;aspect-ratio:5/3;}
+  .big-btn{font-size:14px;padding:10px;}
+  .controls{gap:10px;}
 }
 
 .header{display:flex;gap:14px;align-items:center;}
